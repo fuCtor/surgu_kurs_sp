@@ -46,5 +46,9 @@ gem 'bootstrap-will_paginate'
 gem 'devise'
 gem 'cancan'
 
+gem 'carrierwave'
+gem 'carrierwave-mongoid'
+
+gem 'stateflow'
 gem 'russian'
 gem "tabs_on_rails"

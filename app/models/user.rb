@@ -41,10 +41,11 @@ class User
   ## Token authenticatable
   # field :authentication_token, :type => String
   
-  field :group,   :type => String
-  field :name,   :type => String
-  field :surname,   :type => String
   
-  field :admin, :type => Integer, :default => 0  
+  field :admin, :type => Boolean, :default => false
+  
+  def admin?
+    self.admin
+  end
   
 end
