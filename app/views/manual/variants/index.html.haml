@@ -1,0 +1,7 @@
+- content_for :left_panel do
+  = render template: 'manual/laboratories/show'
+
+.page-header
+  %h1= @manual_laboratory.theme
+
+= render 'list'

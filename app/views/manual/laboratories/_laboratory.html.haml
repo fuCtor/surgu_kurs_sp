@@ -1,4 +1,6 @@
 %tr
+  %td
+    %span.badge= laboratory[:no]
   %td= laboratory[:theme]
   %td= link_to 'Show', manual_subject_laboratory_path(@manual_subject, laboratory)
   %td= link_to 'Edit', edit_manual_subject_laboratory_path(@manual_subject, laboratory)

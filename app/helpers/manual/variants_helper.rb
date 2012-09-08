@@ -1,0 +1,2 @@
+module Manual::VariantsHelper
+end

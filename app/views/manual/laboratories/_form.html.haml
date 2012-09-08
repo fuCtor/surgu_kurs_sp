@@ -20,6 +20,11 @@
         = f.text_field :theme, :class=>"span12"
         
     .control-group
+      %label.control-label= t 'manual.laboratory.no'        
+      .controls
+        = f.text_field :no, :class=>"span12"
+    
+    .control-group
       %label.control-label= t 'manual.laboratory.text'        
       .controls
         = f.text_area :text, :class=>"span12", :rows => 10    

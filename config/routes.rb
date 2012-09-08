@@ -8,7 +8,9 @@ SurguKursSp::Application.routes.draw do
   namespace :manual do
     root to: 'subjects#index'
     resources :subjects do
-      resources :laboratories
+      resources :laboratories do
+        resources :variants
+      end
     end
   end
 

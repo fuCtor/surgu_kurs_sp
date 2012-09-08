@@ -56,3 +56,5 @@ gem 'carrierwave-mongoid'
 gem 'stateflow'
 gem 'russian'
 gem "tabs_on_rails"
+
+gem 'RedCloth'

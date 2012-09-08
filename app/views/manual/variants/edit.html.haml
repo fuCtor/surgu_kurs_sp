@@ -1,0 +1,9 @@
+.row-fluid
+  .span6
+    = render 'form'
+
+.row-fluid
+  .span6
+    = link_to 'Show', manual_subject_laboratory_variant_path(@manual_subject, @manual_laboratory, @manual_variant)
+    \|
+    = link_to 'Back', manual_subject_laboratories_variants_path

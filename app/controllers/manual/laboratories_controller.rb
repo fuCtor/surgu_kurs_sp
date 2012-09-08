@@ -19,10 +19,7 @@ class Manual::LaboratoriesController < ApplicationController
   # GET /manual/laboratories/1.json
   def show
 
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @manual_laboratory }
-    end
+    redirect_to manual_subject_laboratory_variants_path(@manual_subject, @manual_laboratory)
   end
 
   # GET /manual/laboratories/new

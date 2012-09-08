@@ -14,11 +14,20 @@
       
     #main.container-fluid    
       .row-fluid
-        .span3
-          = render 'layouts/sidebar'   
-        .span9
-          = render 'layouts/messages'
-          = yield
+        - if content_for? :left_panel   
+          .span6
+            = render 'layouts/sidebar'
+            = yield :left_panel   
+          .span6
+            = render 'layouts/messages'
+            = yield
+        - else
+          .span3
+            = render 'layouts/sidebar'   
+          .span9
+            = render 'layouts/messages'
+            = yield
+          
 
       %hr
       %footer

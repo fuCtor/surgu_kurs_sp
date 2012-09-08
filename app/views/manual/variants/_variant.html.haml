@@ -1,0 +1,14 @@
+.clearfix
+%li 
+  .span10= variant.text
+  .span2
+    %span.badge= variant.complexity
+    = link_to edit_manual_subject_laboratory_variant_path(@manual_subject, @manual_laboratory, variant), :class => 'btn' do
+      %i.icon-edit
+    = link_to manual_subject_laboratory_variant_path(@manual_subject, @manual_laboratory, variant), :confirm => 'Are you sure?', :method => :delete, :class => 'btn' do
+      %i.icon-remove
+  
+/  
+  %td= link_to 'Show', manual_subject_laboratory_variant_path(@manual_subject, @manual_laboratory, variant)
+  %td= link_to 'Edit', edit_manual_subject_laboratory_variant_path(@manual_subject, @manual_laboratory, variant)
+  %td= link_to 'Destroy', manual_subject_laboratory_variant_path(@manual_subject, @manual_laboratory, variant), :confirm => 'Are you sure?', :method => :delete
