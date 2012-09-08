@@ -1,0 +1,5 @@
+%tr{:id => dom_id(subject)}
+  %td= subject.name
+  %td= link_to 'Show', manual_subject_path(subject)
+  %td= link_to 'Edit', edit_manual_subject_path(subject)
+  %td= link_to 'Destroy', manual_subject_path(subject), :confirm => 'Are you sure?', :method => :delete

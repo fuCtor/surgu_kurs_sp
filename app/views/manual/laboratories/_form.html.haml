@@ -1,0 +1,24 @@
+= form_for @manual_laboratory,
+  :url => (@manual_laboratory.new_record? ? manual_subject_laboratories_path(@manual_subject) : manual_subject_laboratory_path(@manual_subject, @manual_laboratory)), 
+  :html => { :class => "form-horizontal"}, :remote => request.xhr?  do |f|
+  -if @manual_laboratory.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@manual_laboratory.errors.count, "error")} prohibited this editor_organization from being saved:"
+      %ul
+        - @manual_laboratory.errors.full_messages.each do |msg|
+          %li= msg
+  %fieldset
+    - if !request.xhr? 
+      - if @manual_laboratory.new_record?
+        %legend= t 'manual.subject.new'
+      - else
+        %legend= t 'manual.subject.edit'
+        
+    .control-group
+      %label.control-label= t 'manual.laboratory.theme'        
+      .controls
+        = f.text_field :theme, :class=>"span12"
+   
+  - unless request.xhr?
+    .form-actions
+      = f.submit t('manual.subject.save'), :class=>"btn btn-primary"

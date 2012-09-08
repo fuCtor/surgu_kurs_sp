@@ -1,0 +1,14 @@
+%table.table
+  %thead
+    %tr
+      %th= t 'manual.subject.name'
+      %th
+      %th
+      %th
+  %tbody
+    = render @manual_subjects
+
+
+%br
+
+= link_to 'New Subject', new_manual_subject_path

@@ -36,6 +36,10 @@ gem 'jquery-rails'
 # To use debugger
 # gem 'debugger'
 
+group :development do
+  gem 'thin'
+end
+
 gem "haml", ">= 3.1.6"
 gem "haml-rails", ">= 0.3.4", :group => :development
 gem "bootstrap-sass", ">= 2.0.4.0"

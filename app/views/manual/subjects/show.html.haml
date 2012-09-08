@@ -1,0 +1,10 @@
+.row-fluid
+  .span12
+    .page-header
+      %h1= @manual_subject.name
+
+.row-fluid
+  .span12
+    = link_to 'Edit', edit_manual_subject_path(@manual_subject)
+    \|
+    = link_to 'Back', manual_subjects_path

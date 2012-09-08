@@ -1,0 +1,32 @@
+.navbar.navbar-fixed-top
+  .navbar-inner
+    .container-fluid
+      %a.btn.btn-navbar{:'data-toggle' =>"collapse", :"data-target"=>".nav-collapse"}
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar      
+      %a.brand{ :href=>"#"} Laboratory
+      .btn-group.pull-right
+        - if user_signed_in?
+          %a.btn.dropdown-toggle{ :'data-toggle'=>"dropdown", :href=>"#"}
+            %i.icon-user
+            = current_user[:name]
+            = current_user[:surname]
+            %span.caret        
+          %ul.dropdown-menu
+            %li
+              = link_to t('user.profile'), edit_user_password_path
+            %li.divider
+            %li
+              = link_to t('user.sign_out'), destroy_user_session_path, :method => :delete
+        - else
+          = link_to t('user.sign_in'), new_user_session_path, :class => "btn"
+
+      .nav-collapse
+            
+        = tabs_tag :builder => MenuTabBuilder, :open_tabs => { :class => "nav" } do |tab|
+          = tab.home  t('menu.home'), root_path
+          = tab.editor  t('menu.editor'), manual_root_path
+          /= tab.release  t('menu.release'), release_root_path
+          /= tab.reference t('menu.reference'), reference_root_path

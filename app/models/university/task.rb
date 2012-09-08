@@ -4,7 +4,7 @@ module University
     include Mongoid::Document
     include Trackable
     
-    embedded_in :student, class_name: "University::Student"
+    embedded_in :student, class_name: "University::Student", inverse_of: :tasks
     
     embeds_many :solutions, class_name: "University::Solution"
     embeds_many :reports, class_name: "University::Report"

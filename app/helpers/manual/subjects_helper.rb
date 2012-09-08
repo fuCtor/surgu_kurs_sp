@@ -1,0 +1,2 @@
+module Manual::SubjectsHelper
+end

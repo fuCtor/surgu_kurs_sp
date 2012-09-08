@@ -1,0 +1,5 @@
+%tr
+  %td= laboratory[:theme]
+  %td= link_to 'Show', manual_subject_laboratory_path(@manual_subject, laboratory)
+  %td= link_to 'Edit', edit_manual_subject_laboratory_path(@manual_subject, laboratory)
+  %td= link_to 'Destroy', manual_subject_laboratory_path(@manual_subject, laboratory), :confirm => 'Are you sure?', :method => :delete

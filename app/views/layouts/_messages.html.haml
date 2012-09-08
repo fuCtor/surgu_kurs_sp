@@ -1,0 +1,7 @@
+#messages
+  - flash.each do |name, msg|
+    - if msg.is_a?(String)
+      = content_tag :div, :id => "flash_#{name}", :class => "alert alert-info" do
+        %button.close{:"data-dismiss" => "alert"} ×
+        %strong= t("common.#{name}")  
+        = msg 

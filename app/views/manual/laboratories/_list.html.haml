@@ -1,0 +1,17 @@
+.row-fluid
+  .span12
+    %table.table
+      %thead    
+        %tr
+          %th= t 'manual.laboratory.theme'
+          %th
+          %th
+          %th
+      %tbody
+        = render @manual_laboratories
+    
+
+%br
+.row-fluid
+  .span12
+    = link_to 'New Laboratory', new_manual_subject_laboratory_path

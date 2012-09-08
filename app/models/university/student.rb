@@ -7,9 +7,15 @@ module University
     field :surname,  type: String
     field :exercises, type: Hash
     
-    embeds_many :tasks, class_name: "University::Task"
+    field :bachelor, type: Boolean, default: false
     
+    belongs_to :subject, class_name: "Manual::Subject"
     
+    embeds_many :tasks, class_name: "University::Task" do
+      def get_next
+        
+      end
+    end
     
   end  
 end

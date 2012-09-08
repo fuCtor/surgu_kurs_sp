@@ -1,0 +1,2 @@
+module Manual::LaboratoriesHelper
+end
