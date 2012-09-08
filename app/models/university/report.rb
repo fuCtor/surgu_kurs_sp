@@ -5,13 +5,13 @@ module University
   
   class Report
     include Mongoid::Document
-    #include Mongoid::Versioning
+    include Mongoid::Versioning
     include Mongoid::Timestamps::Created
-    include Trackable
+    #include Trackable
     
-    #max_versions 5
+    max_versions 5
     
-    embedded_in :task, class_name: "University::Task", inverse_of: :reports
+    belongs_to :task, class_name: "University::Task", inverse_of: :reports
     
     mount_uploader :file, DocUploader, type: String
     field :review, type: String

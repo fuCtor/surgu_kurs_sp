@@ -6,7 +6,13 @@ module Manual
     
     field :text, type: String
     field :complexity, type: Integer, default: 0
-        
+    
+    def laboratory
+      subj = Subject.where("laboratories._id" => self.laboratory_id).first
+      begin
+        subj.laboratories.select{|i| i.id == self.laboratory_id} .first 
+      end if subj
+    end    
     
   end
 end
