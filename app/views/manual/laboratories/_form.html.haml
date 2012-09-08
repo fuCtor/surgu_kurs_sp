@@ -18,7 +18,27 @@
       %label.control-label= t 'manual.laboratory.theme'        
       .controls
         = f.text_field :theme, :class=>"span12"
-   
+        
+    .control-group
+      %label.control-label= t 'manual.laboratory.text'        
+      .controls
+        = f.text_area :text, :class=>"span12", :rows => 10    
+    
+    .control-group
+      %label.control-label= t 'manual.laboratory.goal'        
+      .controls
+        = f.text_area :goal, :class=>"span12", :rows => 10
+        
+    .control-group
+      %label.control-label= t 'manual.laboratory.description'        
+      .controls
+        = f.text_area :description, :class=>"span12", :rows => 10
+        
+    .control-group
+      %label.control-label= t 'manual.laboratory.report_content'        
+      .controls
+        = f.text_area :report_content, :class=>"span12", :rows => 10
+        
   - unless request.xhr?
     .form-actions
       = f.submit t('manual.subject.save'), :class=>"btn btn-primary"

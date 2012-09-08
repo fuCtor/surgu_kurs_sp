@@ -13,7 +13,8 @@ module Manual
     field :report_content, type: String
     
     def to_param
-      self.subject.laboratories.index(self)
+      #self.subject.laboratories.index(self)
+      self.no
     end
   end
 end
